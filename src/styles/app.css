@@ -1,0 +1,477 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+.desktop_view {
+  display: block;
+}
+
+.mobile_view {
+  display: none;
+}
+
+.rummy {
+  background: url("../../public/assets/bg.png") no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.rummy .header .header_container {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-left: 28px;
+  padding-right: 28px;
+  cursor: pointer;
+}
+
+.rummy .header .header_container .user_profile {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding-top: 20px;
+}
+
+.rummy .header .header_container .user_profile .user_info {}
+
+.rummy .header .header_container .user_profile .user_info .user_heading {
+  font-size: 20px;
+  color: #fcbf00;
+  font-weight: 600;
+}
+
+.rummy .header .header_container .user_profile .user_info .user_name {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.rummy .header .header_container .user_profile .user_container {
+  position: relative;
+  width: fit-content;
+}
+
+.rummy .header .header_container .user_profile img:first-child {
+  height: 60px;
+  width: 60px;
+  max-width: 100%;
+
+}
+
+.rummy .header .header_container .user_profile img:last-child {
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  max-width: 100%;
+}
+
+.rummy .header .header_container .nav_bar {
+  position: relative;
+  text-align: center;
+}
+
+.rummy .header .header_container .nav_bar .nav_bg_img {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rummy .header .header_container .nav_bar img {
+  width: auto;
+  max-width: 100%;
+}
+
+.rummy .header .header_container .nav_bar .nav_container {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  grid-gap: 30px;
+}
+
+.rummy .header .header_container .nav_bar .nav_container div {
+  width: fit-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.rummy .header .header_container .nav_bar .nav_container div p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 16px;
+  color: #fcbf00;
+}
+
+.rummy .header .header_container .lock_key {
+  text-align: end;
+  position: relative;
+  padding-top: 20px;
+
+}
+
+.rummy .header .header_container .lock_key img {
+  height: 48px;
+  width: 48px;
+}
+
+.rummy .rummy-wrapper {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.rummy .rummy-wrapper .body_container {
+  width: 50%;
+  margin-left: auto;
+  text-align: center;
+  margin-right: 6%;
+
+}
+
+.rummy .rummy-wrapper .body_container .app_logo {
+  text-align: center;
+}
+
+.rummy .rummy-wrapper .body_container .app_logo img {
+  max-width: 100%;
+  margin: auto;
+}
+
+.rummy .rummy-wrapper .body_container .rummy_cards {
+  display: flex;
+  justify-content: center;
+}
+
+.rummy .rummy-wrapper .body_container .rummy_cards img {
+  width: 100%;
+  height: 100%;
+}
+
+.mymodal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #d3d4d8;
+  background: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+  width: 500px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.myoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 20%);
+  z-index: 99999;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.custom-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.custom-modal-header p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #52006f;
+}
+
+.custom-modal-header svg {
+  fill: #52006f;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.custom-modal-header svg:hover {
+  transform: rotate(90deg);
+}
+
+.form-group {
+  width: 100%;
+}
+
+input {
+  padding: 12px 20px;
+  border: 1px solid #d3d4d8;
+  border-radius: 4px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  transition: all 200ms;
+}
+
+.btn-primary,
+.btn-primary:focus {
+  background-color: #52006f;
+  margin-top: 20px;
+  width: auto;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: 1px solid #52006f;
+  cursor: pointer;
+  transition: all 600ms;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #52006f;
+}
+
+.btn-cancel,
+.btn-cancel:focus {
+  background-color: #d3d4d8;
+  margin-top: 20px;
+  width: auto;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: 1px solid #d3d4d8;
+  cursor: pointer;
+  transition: all 600ms;
+}
+
+.btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+button {
+  min-width: 100px;
+}
+
+.btn-cancel:hover {
+  background-color: #fff;
+  color: black;
+}
+
+label {
+  font-size: 14px;
+  display: block;
+  padding-bottom: 8px;
+
+}
+
+label span {
+  color: red;
+  font-size: 12px;
+}
+
+input:focus {
+  border: 1px solid #52006f;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+@media only screen and (min-device-width: 200px) and (max-device-width: 1024px) {
+  .mymodal {
+    width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .btn-cancel,
+  .btn-primary {
+    min-width: auto;
+    padding: 8px 16px;
+  }
+
+  .desktop_view {
+    display: none;
+  }
+
+  .mobile_view {
+    display: block;
+    background: url("../../public/assets/bg-mob.png");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .mobile_view .header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .mobile_view .header .nav_bar {
+    position: relative;
+    text-align: center;
+  }
+
+  .mobile_view .header .nav_bar .nav_bg_img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mobile_view .header .nav_bar img {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .mobile_view .header .nav_bar .nav_container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    grid-gap: 8px;
+    width: 70%;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .mobile_view .header .nav_bar .nav_container div {
+    width: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile_view .header .nav_bar .nav_container div p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 16px;
+    color: #fcbf00;
+  }
+
+  .mobile_view .header .header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    align-items: center;
+  }
+
+  .mobile_view .header .header_container .user_container {
+    position: relative;
+  }
+
+  .mobile_view .header .header_container .user_profile {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .mobile_view .header .header_container .user_profile .user_heading {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fcbf00;
+  }
+
+  .mobile_view .header .header_container .user_profile .user_name {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .mobile_view .header .header_container .user_container img:first-child {
+    height: 80px;
+    width: 80px;
+  }
+
+  .mobile_view .header .header_container .star {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+  }
+
+  .mobile_view .header .header_container .lock_key {
+    text-align: right;
+  }
+
+  .mobile_view .rummy-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 75%;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile_view .body_container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .mobile_view .body_container .app_logo {
+    text-align: center;
+  }
+
+  .mobile_view .body_container .app_logo img {
+    max-width: 100%;
+  }
+
+  .mobile_view .body_container .rummy_cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  .mobile_view .body_container .rummy_cards img {
+    max-width: 100%;
+  }
+}
+.login_prompt {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
